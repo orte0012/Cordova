@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<!-- Jessie Ortega 
+
+    orte0012@algonquinlive.com  
+
+    Single Page App
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="content-security-policy" content="default-src 'self';
+    style-src 'unsafe-inline' 'self' ; 
+    script-src 'unsafe-inline' 'self';
+    connect-src  https://api.themoviedb.org/3/search/person https://api.themoviedb.org/3/tv/ https://api.themoviedb.org/3/movie/;
+    media-src 'none'; 
+    font-src *;
+    img-src 'self' https://image.tmdb.org/t/p/"/>
+    <link rel="stylesheet" href="main.css">
+    <title>SPA</title>
+</head>
+<body>
+    <main>
+
+        <div id="search" class="page active">
+            <div>
+                    <h1>Single Page App</h1>
+                    <h1>(SPA)</h1>
+            </div>
+            <h1>Search</h1> 
+            <div class="container">
+                <input type="search" name="search" id="search_input" placeholder="Enter actor's name here .. "/>
+                <button id="btnClick" data-href="actors">&#128269</button>
+            </div> 
+            
+        </div>
+
+        <div id="actors" class="page">
+                <h1>Actor/s</h1>
+                <ol class="list_actors"></ol>
+                <div class="fab" data-href="search">&#128269</div>  
+        </div>
+
+        <div id="movies" class="page">
+                <div id="actor">
+                    <h1></h1>
+                    <img src="" alt="profile">
+                </div>        
+
+                <h2>Associated Movies:</h2>
+                <ol class="list_movies"> 
+                </ol>
+                <div class="fab" data-href="search">&#128269</div>
+               
+        </div>
+
+        <div id="movie_detail" class="page">
+                <h1></h1>
+                <img>
+                <p class="year">Year released: <span></span></p>
+                <p class="genre">Genre(s): <span></span></p>
+                <h2>Cast list</h2>
+                <ol></ol>
+                <div class="fab" data-href="search">&#128269</div>
+                
+        </div>
+        
+    </main>
+    <script defer src="main.js"></script>
+    
+</body>
+</html>
