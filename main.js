@@ -103,7 +103,7 @@ const app ={
 
     getName: (data)=>{ 
         if(data.length == 0){
-            alert('We are sorry, we could not find your searching. Please come back and try again !');
+            alert('Try again ! Can`t find what your searching');
         }else{
             data.forEach( item => {
                 app.person.push(item);
@@ -409,4 +409,5 @@ const app ={
      
  }
 
-document.addEventListener('DOMContentLoaded',app.init);
+ let ready = "cordova" in window ? "deviceready" : "DOMContentLoaded";
+document.addEventListener(ready,app.init);
